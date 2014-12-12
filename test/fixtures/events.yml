@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  time1: 2014-12-09
+  time2: 2014-12-09
+  details: MyString
+  calendar_id: 1
+
+two:
+  name: MyString
+  time1: 2014-12-09
+  time2: 2014-12-09
+  details: MyString
+  calendar_id: 1

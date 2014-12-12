@@ -1,0 +1,38 @@
+
+
+ <div class="container center">
+   <h4>Search by Zip Code</h4>
+    <%= form_tag(calendars_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Zip Code" %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
+
+<h2>Listing calendars</h2>
+
+
+<div class="container">
+
+    <% @calendars.each do |calendar| %>
+        <div class="box panel panel-default">
+        <p><strong>Zip Code: </strong><%= calendar.zip %></p>
+       
+        <p><strong>School Year: </strong><%= calendar.year %></p>
+        <p><strong>District: </strong><%= calendar.district %></p>
+
+        <p><%= link_to 'Filter Events', calendar %></p>
+        <p><%= link_to 'Edit', edit_calendar_path(calendar) %></p>
+        <p><%= link_to 'Destroy', calendar, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+     
+  </div>
+<% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Calendar', new_calendar_path %>
+
+
+<div class="center">
+   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>

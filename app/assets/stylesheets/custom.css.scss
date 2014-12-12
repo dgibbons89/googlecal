@@ -1,0 +1,61 @@
+
+$body-bg:                                                   #ecf0f1;
+$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                                        45px;
+$navbar-default-bg:                          white;
+$navbar-default-brand-color:      #c0392b;
+$brand-primary:                                    #c0392b;
+$jumbotron-bg:                                         white;
+
+@import 'bootstrap';
+.filter
+{
+  font-size: 11px;
+}
+
+.center {
+     text-align: center;
+}
+.box {
+  margin-left: 110px;
+  margin-right: 110px;
+  text-align: center;
+}
+.row {
+  text-align: left;
+}
+.navbar-brand {
+     font-weight: bold;
+}
+.promo {
+  background-color: #56bc94;
+  color: #fff;
+}
+.promo .container {
+  padding-bottom: 15px;
+}
+.promo .overview {
+  margin-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.promo .overview h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.promo .overview .summary {
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+.promo .overview .summary li {
+  margin-bottom: 15px;
+  
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+  
+
+}
+
+
