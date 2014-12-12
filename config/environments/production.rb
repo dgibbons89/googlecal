@@ -80,5 +80,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  config.action_mailer.default_url_options = { host: 'https://nameless-sea-8668.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://infinite-dusk-4266.herokuapp.com/' }
 end
