@@ -6,4 +6,8 @@ class Calendar < ActiveRecord::Base
 	end
 
 
+	def self.count_tag
+	end
+
+
 end
