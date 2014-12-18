@@ -21,7 +21,8 @@ class CalendarsController < ApplicationController
 
   def show
     @calendar = Calendar.find(params[:id])
-        
+    # @tags = @calendar.events.uniq{|x| x.tag}
+    @tags = @calendar.events.map{|t| t.tag}.uniq
  
   end
 

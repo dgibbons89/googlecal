@@ -7,35 +7,32 @@
 </p>
 
 
-  <div class="row">
-  <% @calendar.events.each do |event| %>
-    
-        <%= event.tag %>
-      
-<% end %>
-        </div>
+<div class="row tags">
+  <% @tags.each do |tag| %>
+    <label class="tagcheck"><span>+</span><input type="checkbox" rel=<%= tag.gsub(" ", "-").gsub("/", "-") %> /><%= tag %></label>
+  <% end %>
+</div>
 
-      <div class="row">
-        <div class="col-md-2"><strong>Tag</strong></div>
-          <div class="col-md-1"><strong>Date</strong></div>
-          <div class="col-md-1"><strong>Date End</strong></div>
-          <div class="col-md-4"><strong>Event Name</strong></div>
-          <div class="col-md-4"><strong>Event Details</strong></div>
-        </div>
+<div class="row headers">
+  <div class="col-md-2"><strong>Tag</strong></div>
+  <div class="col-md-1"><strong>Date</strong></div>
+  <div class="col-md-1"><strong>Date End</strong></div>
+  <div class="col-md-4"><strong>Event Name</strong></div>
+  <div class="col-md-4"><strong>Event Details</strong></div>
+</div>
 
 
 <div class="filter">
   <% @calendar.events.each do |event| %>
-      <div class="row">
-        <div class="col-md-2"><%= event.tag %></div>
-          <div class="col-md-1"><%= event.time1 %></div>
-          <div class="col-md-1"><%= event.time2 %></div>
-          <div class="col-md-4"><%= event.name %></div>
-          <div class="col-md-4"><%= event.details %></div>
-          
-        </div>
-    <% end %>
-  </div>
+    <div class="row <%= event.tag.gsub(" ", "-").gsub("/", "-") %>">
+      <div class="col-md-2"><%= event.tag %></div>
+      <div class="col-md-1"><%= event.time1 %></div>
+      <div class="col-md-1"><%= event.time2 %></div>
+      <div class="col-md-4"><%= event.name %></div>
+      <div class="col-md-4"><%= event.details %></div>
+    </div>
+  <% end %>
+</div>
     
   
 
