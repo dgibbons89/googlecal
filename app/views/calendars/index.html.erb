@@ -20,9 +20,8 @@
         <p><strong>School Year: </strong><%= calendar.year %></p>
         <p><strong>District: </strong><%= calendar.district %></p>
 
-        <p><%= link_to 'Filter Events', calendar %></p>
-        <p><%= link_to 'Edit', edit_calendar_path(calendar) %></p>
-        <p><%= link_to 'Destroy', calendar, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Filter Events', calendar, class: "btn btn-default btn-lg" %></p>
+        
      
   </div>
 <% end %>
